@@ -1,6 +1,7 @@
 # Setting $PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+ZSH_DISABLE_COMPFIX=true
 # Path to the oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -29,4 +30,8 @@ SPACESHIP_DOCKER_SHOW=false
 # Sourcing oh-my-zsh and other shell helpers
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_exports
-source $HOME/.zsh_aliases
+#source $HOME/.zsh_aliasesfpath=($fpath "/Users/wayne/.zfunctions")
+
+  # Set Spaceship ZSH as a prompt
+  autoload -U promptinit; promptinit
+  prompt spaceship
